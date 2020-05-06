@@ -20,4 +20,4 @@ class CommentView(View):
 		try:
 			return JsonResponse({'data':comment_data},status=200)
 		except Comment.DoesNotExist:
-			return JsonResponse({'message':'COMMNET_DOST_NOT_EXIST'},status=400)
+			return JsonResponse({'message':'COMMNET_DOSE_NOT_EXIST'},status=400)

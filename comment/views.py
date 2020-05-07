@@ -9,6 +9,7 @@ class CommentView(View):
 		data = json.loads(request.body)
 		try:
 			Comment.objects.create(
+				author = data['author'],
 				text = data['text']
 			)
 			return HttpResponse(status=200)

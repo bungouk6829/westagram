@@ -28,7 +28,7 @@ class AccountView(View):
 		except Account.DoesNotExist:
 			return JsonResponse({'message':'ACCOUNT_DOES_NOT_EXIST'}, status=400)
 
-class SignUpView(View):
+class SignInView(View):
 	
 	def post(self,request):
 		data = json.loads(request.body)
